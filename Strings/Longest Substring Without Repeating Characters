@@ -1,0 +1,53 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution {
+
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+
+        Map<Character, Integer> charIndexMap = new HashMap<>();
+        int maxLength = 0;
+        int windowStart = 0;
+
+        for (int windowEnd = 0; windowEnd < s.length(); windowEnd++) {
+            char currentChar = s.charAt(windowEnd);
+
+            if (charIndexMap.containsKey(currentChar)) {
+                windowStart = Math.max(windowStart, charIndexMap.get(currentChar) + 1);
+            }
+
+            charIndexMap.put(currentChar, windowEnd);
+            maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+        }
+
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+
+        String s1 = "abcabcbb";
+        System.out.println("Input: \"" + s1 + "\" -> Output: " + solution.lengthOfLongestSubstring(s1));
+
+        String s2 = "bbbbb";
+        System.out.println("Input: \"" + s2 + "\" -> Output: " + solution.lengthOfLongestSubstring(s2));
+
+        String s3 = "pwwkew";
+        System.out.println("Input: \"" + s3 + "\" -> Output: " + solution.lengthOfLongestSubstring(s3));
+        
+        String s4 = "";
+        System.out.println("Input: \"" + s4 + "\" -> Output: " + solution.lengthOfLongestSubstring(s4));
+        
+        String s5 = " ";
+        System.out.println("Input: \"" + s5 + "\" -> Output: " + solution.lengthOfLongestSubstring(s5));
+
+        String s6 = "au";
+        System.out.println("Input: \"" + s6 + "\" -> Output: " + solution.lengthOfLongestSubstring(s6));
+        
+        String s7 = "abba";
+        System.out.println("Input: \"" + s7 + "\" -> Output: " + solution.lengthOfLongestSubstring(s7));
+    }
+}
