@@ -1,7 +1,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/LeetCode-Practice-orange?style=for-the-badge&logo=leetcode" />
-  <img src="https://img.shields.io/badge/Java-Programming-blue?style=for-the-badge&logo=java" />
+  <img src="https://img.shields.io/badge/Java-Solutions-blue?style=for-the-badge&logo=java" />
   <img src="https://img.shields.io/badge/MySQL-Queries-green?style=for-the-badge&logo=mysql" />
+  <img src="https://img.shields.io/badge/C++-Solutions-lightgrey?style=for-the-badge&logo=c%2B%2B" />
 </p>
 
 # 🚀 LeetCode Practice by Akshay Uparikar
@@ -13,9 +14,12 @@ This repo showcases my solutions to coding challenges in **Java** and **MySQL**,
 
 ## 📂 Repository Structure
 
-leetcode_practice/
-java/    → Solutions implemented in Java
-mysql/   → SQL queries for database problems
+
+| Folder | Description |
+|--------|-------------|
+| `java/`  | Solutions implemented in Java |
+| `mysql/` | SQL queries for database problems |
+| `cpp/` | Solution implemented in CPP |
 
 
 ---
@@ -45,7 +49,7 @@ I am actively looking for **job opportunities** in:
 - Software Development  
 - Backend Engineering  
 - Full-Stack Development  
-- Data Engineering  
+- Software Engineer 
 
 ---
 
